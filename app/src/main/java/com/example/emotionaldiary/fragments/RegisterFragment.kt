@@ -50,11 +50,6 @@ class RegisterFragment : Fragment() {
                 .replace(R.id.fragment_container, LoginFragment())
                 .commit()
         }
-
-        view.findViewById<View>(R.id.vk_register_button).setOnClickListener {
-            // Обработка регистрации через VK
-            Toast.makeText(context, "Регистрация через VK не реализована в этой демо-версии", Toast.LENGTH_SHORT).show()
-        }
     }
 
     private fun registerWithEmail() {

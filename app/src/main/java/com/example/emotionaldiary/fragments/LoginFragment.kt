@@ -45,11 +45,6 @@ class LoginFragment : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
-
-        view.findViewById<View>(R.id.vk_login_button).setOnClickListener {
-            // Обработка входа через VK
-            Toast.makeText(context, "Вход через VK не реализован в этой демо-версии", Toast.LENGTH_SHORT).show()
-        }
     }
 
     private fun loginWithEmail() {
