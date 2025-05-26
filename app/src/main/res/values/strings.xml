@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Дневник эмоций</string>
+
+    <!-- Нижняя навигация -->
+    <string name="my_diary">Мой дневник</string>
+    <string name="calendar">Календарь</string>
+    <string name="about_app">О приложении</string>
+    <string name="settings">Настройки</string>
+
+    <!-- Экран настроек -->
+    <string name="ivan_ivanov">Иван Иванов</string>
+    <string name="profile_image">Изображение профиля</string>
+    <string name="navigate">Перейти</string>
+    <string name="login_settings">Настройки входа</string>
+    <string name="notifications">Уведомления</string>
+
+    <!-- Экраны входа/регистрации -->
+    <string name="login">Вход</string>
+    <string name="registration">Регистрация:</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Пароль</string>
+    <string name="name_hint">Имя</string>
+    <string name="surname_hint">Фамилия</string>
+    <string name="continue_text">продолжить</string>
+    <string name="save">сохранить</string>
+    <string name="no_account_register">Ещё нет аккаунта? Зарегистрироваться…</string>
+    <string name="already_have_account">Уже есть аккаунт? Войти…</string>
+    <string name="login_with_vk">войти с VK ID</string>
+    <string name="register_with_vk">регистрация с VK ID</string>
+    <string name="vk_icon">Иконка VK</string>
+
+    <!-- Экран дневника -->
+    <string name="today_date">Сегодня, 21 марта</string>
+    <string name="entry_for_today">запись за сегодня:</string>
+    <string name="emotion_icon">Иконка эмоции</string>
+    <string name="overall_feelings">ощущения в целом:</string>
+    <string name="enter_feelings">Введите ваши ощущения…</string>
+    <string name="comments">комментарий:</string>
+    <string name="enter_comments">Введите ваш комментарий…</string>
+    <string name="trends">Тенденции:</string>
+    <string name="trends_chart">График трендов</string>
+
+    <!-- Экран календаря -->
+    <string name="june_2024">Июнь 2024</string>
+    <string name="previous_month">Предыдущий месяц</string>
+    <string name="next_month">Следующий месяц</string>
+    <string name="sun">ВС</string>
+    <string name="mon">ПН</string>
+    <string name="tue">ВТ</string>
+    <string name="wed">СР</string>
+    <string name="thu">ЧТ</string>
+    <string name="fri">ПТ</string>
+    <string name="sat">СБ</string>
+    <string name="your_entries">Ваши записи:</string>
+    <string name="add_entry">Добавить запись</string>
+    <string name="body_diagram">Диаграмма тела</string>
+
+    <!-- Экран о приложении -->
+    <string name="about_app_description">В современном мире, где стресс и эмоциональная нагрузка становятся частью повседневной жизни, важно уметь отслеживать и анализировать свои эмоции и чувства и направлять их в конструктивное русло. Многие люди сталкиваются с трудностями в понимании своих эмоций и их влияния на поведение и принятие решений. Наше приложение поможет сделать первый и самый важный шаг в развитии эмоционального интеллекта – способности перерабатывать и использовать информацию, содержащуюся в эмоциях.</string>
+    <string name="useful_information">Полезная информация:</string>
+    <string name="mental_health_importance">Значимость ментального здоровья</string>
+    <string name="focus_on_main">Концентрация на главном</string>
+
+    <!-- Эмоции -->
+    <string name="emotion_expectation">Ожидание</string>
+    <string name="emotion_joy">Радость</string>
+    <string name="emotion_trust">Доверие</string>
+    <string name="emotion_fear">Страх</string>
+    <string name="emotion_surprise">Удивление</string>
+    <string name="emotion_sadness">Грусть</string>
+    <string name="emotion_displeasure">Неудовольствие</string>
+    <string name="emotion_anger">Гнев</string>
+    <string name="general_feeling">Общее самочувствие</string>
+
+    <!-- Добавляем в strings.xml -->
+    <string name="logout">Выйти из аккаунта</string>
+    <string name="emotion_entry">Запись эмоций</string>
+    <string name="main_feelings">Основные чувства за день:</string>
+    <string name="additional_comments">Дополнительные комментарии:</string>
+    <string name="main_feelings_hint">Опишите ваши основные чувства...</string>
+    <string name="additional_comments_hint">Добавьте комментарии к вашим эмоциям...</string>
+    <string name="emotion_scale">Эмоциональная шкала</string>
+    <string name="save_entry">Сохранить запись</string>
+
+    <string name="back">Назад</string>
+    <string name="notification_settings">Настройки уведомлений</string>
+    <string name="enable_notifications">Включить уведомления</string>
+    <string name="notification_time">Время уведомления</string>
+    <string name="change_time">Изменить время</string>
+    <string name="notification_description">Описание уведомлений</string>
+</resources>

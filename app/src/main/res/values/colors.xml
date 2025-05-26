@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="green_dark">#5B855F</color>
+    <color name="green_middle">#91B38E</color>
+
+
+    <!-- App theme colors -->
+    <color name="green_medium">#A6C5A6</color>
+    <color name="green_light">#D1E7D1</color>
+    <color name="background_light">#F5F5F5</color>
+    <color name="blue_accent">#2196F3</color>
+
+    <!-- Основные цвета приложения -->
+    <color name="primary">#4CAF50</color>
+    <color name="primary_dark">#388E3C</color>
+    <color name="primary_light">#C8E6C9</color>
+    <color name="accent">#8BC34A</color>
+
+    <!-- Цвета фона -->
+    <color name="background_primary">#F5F5F5</color>
+    <color name="background_secondary">#FFFFFF</color>
+
+    <!-- Цвета текста -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+
+    <!-- Разделители и границы -->
+    <color name="divider">#EEEEEE</color>
+
+    <!-- Цвета панели навигации -->
+    <color name="bottom_nav_background">#5B855F</color>
+    <color name="bottom_nav_selected">#5DB261</color>
+    <color name="bottom_nav_unselected">#EDF3EC</color>
+
+    <!-- Цвета эмоций -->
+    <color name="yellow_primary">#FFC107</color>  <!-- Счастье -->
+    <color name="green_primary">#4CAF50</color>   <!-- Спокойствие -->
+    <color name="orange_primary">#FF9800</color>  <!-- Возбуждение -->
+    <color name="purple_primary">#9C27B0</color>  <!-- Тревога -->
+    <color name="red_primary">#F44336</color>     <!-- Гнев -->
+    <color name="blue_primary">#2196F3</color>    <!-- Грусть -->
+</resources>
