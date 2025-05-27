@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.emotionaldiary">
 
+    <!-- Разрешение на интернет -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,26 +13,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EmotionalDiary">
 
+        <!-- Экран входа: стартовая активность -->
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-            <!-- Deep link for auth callback -->
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                    android:scheme="https"
-                    android:host="oauth.vk.com"
-                    android:pathPrefix="/blank.html" />
-            </intent-filter>
         </activity>
+
+        <!-- Экран регистрации -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Главный экран приложения после входа -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>
