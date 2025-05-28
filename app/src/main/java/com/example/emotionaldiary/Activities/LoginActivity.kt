@@ -1,4 +1,4 @@
-package com.example.emotionaldiary
+package com.example.emotionaldiary.Activities
 
 import android.content.Intent
 import android.os.Bundle

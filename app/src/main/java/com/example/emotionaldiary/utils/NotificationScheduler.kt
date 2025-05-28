@@ -8,7 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import com.example.emotionaldiary.MainActivity
+import com.example.emotionaldiary.Activities.MainActivity
 import com.example.emotionaldiary.R
 import com.example.emotionaldiary.receivers.NotificationReceiver
 import java.util.*

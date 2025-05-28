@@ -1,4 +1,4 @@
-package com.example.emotionaldiary
+package com.example.emotionaldiary.Activities
 
 import android.content.Intent
 import android.net.Uri
@@ -8,6 +8,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import com.example.emotionaldiary.R
 import com.example.emotionaldiary.auth.AuthManager
 import com.example.emotionaldiary.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
