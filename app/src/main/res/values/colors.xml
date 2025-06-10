@@ -11,6 +11,9 @@
     <color name="green_dark">#5B855F</color>
     <color name="green_middle">#91B38E</color>
 
+    <color name="cyan_primary">#00BCD4</color>
+    <color name="pink_primary">#E91E63</color>
+
 
     <!-- App theme colors -->
     <color name="green_medium">#A6C5A6</color>
@@ -32,6 +35,8 @@
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
     <color name="text_hint">#BDBDBD</color>
+    <color name="text_gray">#787276
+    </color>
 
     <!-- Разделители и границы -->
     <color name="divider">#EEEEEE</color>

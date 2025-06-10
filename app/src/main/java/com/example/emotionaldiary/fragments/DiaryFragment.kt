@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -46,37 +44,25 @@ class DiaryFragment : Fragment() {
         emotionRepository = EmotionRepository(requireContext())
         authManager = AuthManager(requireContext())
 
-        // Initialize views
         dateText = view.findViewById(R.id.date_text)
         emotionIcon = view.findViewById(R.id.emotion_icon)
         feelingsInput = view.findViewById(R.id.feelings_input)
         commentsInput = view.findViewById(R.id.comments_input)
 
-        // Set up date display
         updateDateDisplay()
 
-        // Set up emotion icon click
         emotionIcon.setOnClickListener {
             showEmotionSelector()
         }
 
-        // Load existing entry for today
         loadTodayEntry()
-
-        // Set up chart
         setupTrendsChart(view)
-
-        // Set up auto-save
         setupAutoSave()
     }
 
     private fun updateDateDisplay() {
         val dateFormat = SimpleDateFormat("EEEE, d MMMM", Locale("ru"))
         dateText.text = dateFormat.format(calendar.time)
-
-        // Update day number
-        val dayNumber = view?.findViewById<TextView>(R.id.day_number)
-        dayNumber?.text = calendar.get(Calendar.DAY_OF_MONTH).toString()
     }
 
     private fun loadTodayEntry() {
@@ -86,30 +72,39 @@ class DiaryFragment : Fragment() {
 
         if (entry != null) {
             selectedEmotionType = entry.emotionType
-            updateEmotionIcon()
+            feelingsInput.text = entry.overallFeeling
+            commentsInput.text = entry.comments
 
-            feelingsInput.setText(entry.overallFeeling)
-            commentsInput.setText(entry.comments)
+            updateEmotionIconFromFeeling(entry.overallFeeling)
         }
+    }
+
+    private fun updateEmotionIconFromFeeling(feeling: String) {
+        val iconRes = when (feeling) {
+            "Неприятные" -> R.drawable.tree4
+            "Отчасти неприятные" -> R.drawable.tree1
+            "Нейтральные" -> R.drawable.tree2
+            "Отчасти приятные" -> R.drawable.tree3
+            "Приятные" -> R.drawable.tree5
+            else -> R.drawable.tree
+        }
+        emotionIcon.setImageResource(iconRes)
     }
 
     private fun setupTrendsChart(view: View) {
         val userId = authManager.getUserId() ?: return
 
-        // Get entries for the last 30 days
         val endDate = calendar.time
         calendar.add(Calendar.DAY_OF_MONTH, -30)
         val startDate = calendar.time
-        calendar.add(Calendar.DAY_OF_MONTH, 30) // Reset calendar
+        calendar.add(Calendar.DAY_OF_MONTH, 30)
 
         val entries = emotionRepository.getAllEntriesForUser(userId)
             .filter { it.date in startDate..endDate }
 
-        // Find chart view in the trends card
         val chartImage = view.findViewById<ImageView>(R.id.chart_image)
         chartImage.visibility = View.GONE
 
-        // Create and add EmotionChartView
         val chartView = EmotionChartView(requireContext())
         val parent = chartImage.parent as ViewGroup
         parent.addView(chartView, ViewGroup.LayoutParams(
@@ -117,12 +112,10 @@ class DiaryFragment : Fragment() {
             ViewGroup.LayoutParams.MATCH_PARENT
         ))
 
-        // Set data
         chartView.setData(entries)
     }
 
     private fun setupAutoSave() {
-        // Auto-save when focus changes
         feelingsInput.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) saveEntry()
         }
@@ -153,8 +146,6 @@ class DiaryFragment : Fragment() {
     }
 
     private fun showEmotionSelector() {
-        // In a real app, this would show a dialog or bottom sheet with emotion options
-        // For simplicity, we'll just cycle through emotions
         selectedEmotionType = when (selectedEmotionType) {
             EmotionType.NEUTRAL -> EmotionType.CALM
             EmotionType.CALM -> EmotionType.HAPPY
@@ -163,25 +154,11 @@ class DiaryFragment : Fragment() {
             EmotionType.ANXIOUS -> EmotionType.ANGRY
             EmotionType.ANGRY -> EmotionType.SAD
             EmotionType.SAD -> EmotionType.NEUTRAL
+            EmotionType.INTEREST -> EmotionType.INTEREST
+            EmotionType.SURPRISE -> EmotionType.SURPRISE
         }
 
-        updateEmotionIcon()
         saveEntry()
-    }
-
-    private fun updateEmotionIcon() {
-        // Update icon based on selected emotion
-        val iconResource = when (selectedEmotionType) {
-            EmotionType.CALM -> R.drawable.tree // Use appropriate icons
-            EmotionType.HAPPY -> R.drawable.tree
-            EmotionType.EXCITED -> R.drawable.tree
-            EmotionType.ANXIOUS -> R.drawable.tree
-            EmotionType.ANGRY -> R.drawable.tree
-            EmotionType.SAD -> R.drawable.tree
-            EmotionType.NEUTRAL -> R.drawable.tree
-        }
-
-        emotionIcon.setImageResource(iconResource)
     }
 
     override fun onPause() {

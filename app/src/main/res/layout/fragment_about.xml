@@ -52,7 +52,7 @@
                         android:layout_height="wrap_content"
                         android:padding="16dp"
                         android:text="@string/about_app_description"
-                        android:textColor="@color/white"
+                        android:textColor="@color/text_primary"
                         android:textSize="14sp" />
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -104,7 +104,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/mental_health_importance"
-                            android:textColor="@color/white"
+                            android:textColor="@color/text_primary"
                             android:textSize="16dp"
                             android:textStyle="bold" />
 
@@ -113,7 +113,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="Ментальное здоровье — основа благополучия и качества жизни. Оно влияет на мышление, поведение, эмоции и способность справляться со стрессом. Поддержание психологического равновесия важно так же, как и физическое здоровье. Забота о себе, отдых и открытость к помощи — ключевые шаги к гармонии и внутренней устойчивости."
-                            android:textColor="@color/white"
+                            android:textColor="@color/text_gray"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -141,7 +141,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/focus_on_main"
-                            android:textColor="@color/white"
+                            android:textColor="@color/text_primary"
                             android:textSize="16dp"
                             android:textStyle="bold" />
 
@@ -150,7 +150,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="Концентрация на главном помогает достигать целей быстрее и эффективнее. Умение выделять приоритеты снижает стресс, улучшает продуктивность и сохраняет энергию. Важно отказаться от лишнего, сосредоточившись на том, что действительно имеет значение. Осознанный фокус — ключ к ясности, росту и внутреннему спокойствию."
-                            android:textColor="@color/white"
+                            android:textColor="@color/text_gray"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

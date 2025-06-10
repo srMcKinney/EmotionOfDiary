@@ -51,9 +51,7 @@ class CalendarAdapter(private val context: Context, private val dates: List<Date
         }
 
         // Highlight dates with entries
-        if (highlightedDates.contains(day) && month == currentMonth) {
-            dayText.setTextColor(context.getColor(R.color.blue_accent))
-        }
+
 
         return view
     }

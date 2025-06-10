@@ -9,7 +9,9 @@ data class EmotionValues(
     val excitementValue: Int = 5,
     val anxietyValue: Int = 5,
     val angerValue: Int = 5,
-    val sadnessValue: Int = 5
+    val sadnessValue: Int = 5,
+    val interestValue: Int = 5,
+    val surpriseValue: Int = 5
 ) {
     /**
      * Получает доминирующую эмоцию на основе значений
@@ -21,14 +23,16 @@ data class EmotionValues(
             EmotionType.EXCITED to excitementValue,
             EmotionType.ANXIOUS to anxietyValue,
             EmotionType.ANGRY to angerValue,
-            EmotionType.SAD to sadnessValue
+            EmotionType.SAD to sadnessValue,
+            EmotionType.INTEREST to interestValue,
+            EmotionType.SURPRISE to surpriseValue,
         )
 
         // Находим эмоцию с максимальным значением
         val maxEmotion = emotions.maxByOrNull { it.value }
 
-        // Если все эмоции имеют одинаковое значение или близкое к среднему,
-        // возвращаем NEUTRAL, иначе возвращаем доминирующую эмоцию
+        // Если максимальное значение больше порога (например, 6), возвращаем доминирующую эмоцию
+        // иначе считаем состояние нейтральным
         return if (maxEmotion != null && maxEmotion.value > 6) {
             maxEmotion.key
         } else {
@@ -40,15 +44,16 @@ data class EmotionValues(
      * Получает среднее значение всех эмоций
      */
     fun getAverageValue(): Float {
-        return (happinessValue + calmValue + excitementValue +
-                anxietyValue + angerValue + sadnessValue) / 6.0f
+        val sum = happinessValue + calmValue + excitementValue + anxietyValue +
+                angerValue + sadnessValue + interestValue + surpriseValue
+        return sum / 8.0f
     }
 
     /**
      * Получает общую интенсивность эмоций
      */
     fun getTotalIntensity(): Int {
-        return happinessValue + calmValue + excitementValue +
-                anxietyValue + angerValue + sadnessValue
+        return happinessValue + calmValue + excitementValue + anxietyValue +
+                angerValue + sadnessValue + interestValue + surpriseValue
     }
 }
