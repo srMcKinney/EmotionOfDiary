@@ -81,7 +81,10 @@
                         android:id="@+id/emotion_icon"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
-                        android:src="@drawable/tree" />
+                        android:src="@drawable/tree"
+                        android:background="@drawable/rounded_background"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true" />
 
                     <LinearLayout
                         android:layout_width="0dp"
